@@ -22,6 +22,11 @@ namespace SkarLauncher
             this.homePanel.Visible = true;
             currentPanel = this.homePanel;
 
+            foreach(Installation install in Program.getConfig().GetInstallations())
+            {
+                this.installBar.Controls.Add(SkarUtils.createButton(install));
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -224,6 +229,21 @@ namespace SkarLauncher
             Program.getConfig().createProfile(profilePath, profileName, this.addInstall_colorDialog.Color, this.addInstall_injectJaguar.Checked,
                 this.addInstall_injectYosemite.Checked, this.addInstall_injectClient.Checked, this.addInstall_injectMemoryFix.Checked, this.addInstall_injectConsole.Checked,
                 this.addInstall_useHarmony.Checked, this.addInstall_useLawin.Checked, this.addInstall_noMCP.Checked);
+        }
+
+        private void gamePanel_headerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

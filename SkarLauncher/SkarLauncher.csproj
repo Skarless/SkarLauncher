@@ -125,6 +125,23 @@
   <ItemGroup>
     <None Include="Resources\news.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\back_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

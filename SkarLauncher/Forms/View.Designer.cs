@@ -32,10 +32,6 @@ namespace SkarLauncher
         private void InitializeComponent()
         {
             this.topBar = new System.Windows.Forms.Panel();
-            this.favicon = new System.Windows.Forms.Label();
-            this.topBar_Minimize = new System.Windows.Forms.Button();
-            this.topBar_Maximize = new System.Windows.Forms.Button();
-            this.topBar_Close = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.addInstallPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.addInstall_colorButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -63,6 +59,16 @@ namespace SkarLauncher
             this.homeButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.addInstallation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.addInstall_colorDialog = new System.Windows.Forms.ColorDialog();
+            this.gamePanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.favicon = new System.Windows.Forms.Label();
+            this.topBar_Minimize = new System.Windows.Forms.Button();
+            this.topBar_Maximize = new System.Windows.Forms.Button();
+            this.topBar_Close = new System.Windows.Forms.Button();
+            this.gamePanel_headerLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addInstallPanel)).BeginInit();
@@ -71,6 +77,8 @@ namespace SkarLauncher
             this.homePanel.SuspendLayout();
             this.sideBarPanel.SuspendLayout();
             this.installBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gamePanel)).BeginInit();
+            this.gamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // topBar
@@ -87,71 +95,10 @@ namespace SkarLauncher
             this.topBar.TabIndex = 1;
             this.topBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topBar_MouseDown);
             // 
-            // favicon
-            // 
-            this.favicon.AutoSize = true;
-            this.favicon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.favicon.Image = global::SkarLauncher.Properties.Resources.logo_x20;
-            this.favicon.Location = new System.Drawing.Point(20, 7);
-            this.favicon.Name = "favicon";
-            this.favicon.Size = new System.Drawing.Size(25, 13);
-            this.favicon.TabIndex = 1;
-            this.favicon.Text = "      ";
-            // 
-            // topBar_Minimize
-            // 
-            this.topBar_Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topBar_Minimize.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.topBar_Minimize.FlatAppearance.BorderSize = 0;
-            this.topBar_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.topBar_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Minimize.Image = global::SkarLauncher.Properties.Resources.icons8_subtract_16;
-            this.topBar_Minimize.Location = new System.Drawing.Point(1062, 0);
-            this.topBar_Minimize.Name = "topBar_Minimize";
-            this.topBar_Minimize.Size = new System.Drawing.Size(45, 28);
-            this.topBar_Minimize.TabIndex = 5;
-            this.topBar_Minimize.TabStop = false;
-            this.topBar_Minimize.UseVisualStyleBackColor = false;
-            this.topBar_Minimize.Click += new System.EventHandler(this.topBar_Minimize_Click);
-            // 
-            // topBar_Maximize
-            // 
-            this.topBar_Maximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Maximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topBar_Maximize.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.topBar_Maximize.FlatAppearance.BorderSize = 0;
-            this.topBar_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.topBar_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Maximize.Image = global::SkarLauncher.Properties.Resources.icons8_maximize_button_16;
-            this.topBar_Maximize.Location = new System.Drawing.Point(1107, 0);
-            this.topBar_Maximize.Name = "topBar_Maximize";
-            this.topBar_Maximize.Size = new System.Drawing.Size(45, 28);
-            this.topBar_Maximize.TabIndex = 4;
-            this.topBar_Maximize.TabStop = false;
-            this.topBar_Maximize.UseVisualStyleBackColor = false;
-            this.topBar_Maximize.Click += new System.EventHandler(this.topBar_Maximize_Click);
-            // 
-            // topBar_Close
-            // 
-            this.topBar_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topBar_Close.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.topBar_Close.FlatAppearance.BorderSize = 0;
-            this.topBar_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.topBar_Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topBar_Close.Image = global::SkarLauncher.Properties.Resources.icons8_close_16;
-            this.topBar_Close.Location = new System.Drawing.Point(1152, 0);
-            this.topBar_Close.Name = "topBar_Close";
-            this.topBar_Close.Size = new System.Drawing.Size(45, 28);
-            this.topBar_Close.TabIndex = 3;
-            this.topBar_Close.TabStop = false;
-            this.topBar_Close.UseVisualStyleBackColor = false;
-            this.topBar_Close.Click += new System.EventHandler(this.button1_Click);
-            // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.mainPanel.Controls.Add(this.gamePanel);
             this.mainPanel.Controls.Add(this.addInstallPanel);
             this.mainPanel.Controls.Add(this.homePanel);
             this.mainPanel.Controls.Add(this.sideBarPanel);
@@ -655,6 +602,199 @@ namespace SkarLauncher
             this.addInstallation.Values.Text = "";
             this.addInstallation.Click += new System.EventHandler(this.addInstallation_Click);
             // 
+            // gamePanel
+            // 
+            this.gamePanel.Controls.Add(this.label2);
+            this.gamePanel.Controls.Add(this.kryptonTextBox1);
+            this.gamePanel.Controls.Add(this.label1);
+            this.gamePanel.Controls.Add(this.gamePanel_headerLabel);
+            this.gamePanel.Controls.Add(this.kryptonButton1);
+            this.gamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gamePanel.Location = new System.Drawing.Point(66, 0);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Padding = new System.Windows.Forms.Padding(10, 40, 10, 0);
+            this.gamePanel.Size = new System.Drawing.Size(1131, 560);
+            this.gamePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.gamePanel.StateCommon.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.gamePanel.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.gamePanel.StateCommon.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.gamePanel.StateNormal.Image = global::SkarLauncher.Properties.Resources.back_5;
+            this.gamePanel.StateNormal.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
+            this.gamePanel.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.gamePanel.TabIndex = 3;
+            // 
+            // favicon
+            // 
+            this.favicon.AutoSize = true;
+            this.favicon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.favicon.Image = global::SkarLauncher.Properties.Resources.logo_x20;
+            this.favicon.Location = new System.Drawing.Point(20, 7);
+            this.favicon.Name = "favicon";
+            this.favicon.Size = new System.Drawing.Size(25, 13);
+            this.favicon.TabIndex = 1;
+            this.favicon.Text = "      ";
+            // 
+            // topBar_Minimize
+            // 
+            this.topBar_Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Minimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topBar_Minimize.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.topBar_Minimize.FlatAppearance.BorderSize = 0;
+            this.topBar_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.topBar_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Minimize.Image = global::SkarLauncher.Properties.Resources.icons8_subtract_16;
+            this.topBar_Minimize.Location = new System.Drawing.Point(1062, 0);
+            this.topBar_Minimize.Name = "topBar_Minimize";
+            this.topBar_Minimize.Size = new System.Drawing.Size(45, 28);
+            this.topBar_Minimize.TabIndex = 5;
+            this.topBar_Minimize.TabStop = false;
+            this.topBar_Minimize.UseVisualStyleBackColor = false;
+            this.topBar_Minimize.Click += new System.EventHandler(this.topBar_Minimize_Click);
+            // 
+            // topBar_Maximize
+            // 
+            this.topBar_Maximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Maximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topBar_Maximize.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.topBar_Maximize.FlatAppearance.BorderSize = 0;
+            this.topBar_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.topBar_Maximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Maximize.Image = global::SkarLauncher.Properties.Resources.icons8_maximize_button_16;
+            this.topBar_Maximize.Location = new System.Drawing.Point(1107, 0);
+            this.topBar_Maximize.Name = "topBar_Maximize";
+            this.topBar_Maximize.Size = new System.Drawing.Size(45, 28);
+            this.topBar_Maximize.TabIndex = 4;
+            this.topBar_Maximize.TabStop = false;
+            this.topBar_Maximize.UseVisualStyleBackColor = false;
+            this.topBar_Maximize.Click += new System.EventHandler(this.topBar_Maximize_Click);
+            // 
+            // topBar_Close
+            // 
+            this.topBar_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topBar_Close.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.topBar_Close.FlatAppearance.BorderSize = 0;
+            this.topBar_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.topBar_Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.topBar_Close.Image = global::SkarLauncher.Properties.Resources.icons8_close_16;
+            this.topBar_Close.Location = new System.Drawing.Point(1152, 0);
+            this.topBar_Close.Name = "topBar_Close";
+            this.topBar_Close.Size = new System.Drawing.Size(45, 28);
+            this.topBar_Close.TabIndex = 3;
+            this.topBar_Close.TabStop = false;
+            this.topBar_Close.UseVisualStyleBackColor = false;
+            this.topBar_Close.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gamePanel_headerLabel
+            // 
+            this.gamePanel_headerLabel.AutoSize = true;
+            this.gamePanel_headerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.gamePanel_headerLabel.Font = new System.Drawing.Font("League Spartan", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gamePanel_headerLabel.ForeColor = System.Drawing.Color.White;
+            this.gamePanel_headerLabel.Location = new System.Drawing.Point(24, 40);
+            this.gamePanel_headerLabel.Name = "gamePanel_headerLabel";
+            this.gamePanel_headerLabel.Size = new System.Drawing.Size(232, 44);
+            this.gamePanel_headerLabel.TabIndex = 0;
+            this.gamePanel_headerLabel.Text = "Placeholder";
+            this.gamePanel_headerLabel.Click += new System.EventHandler(this.gamePanel_headerLabel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(27, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Placeholder";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.BreadCrumb;
+            this.kryptonButton1.Location = new System.Drawing.Point(780, 439);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.ForestGreen;
+            this.kryptonButton1.OverrideDefault.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kryptonButton1.OverrideDefault.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton1.OverrideDefault.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.OverrideDefault.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.OverrideDefault.Border.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kryptonButton1.OverrideDefault.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton1.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.OverrideDefault.Border.Rounding = 5;
+            this.kryptonButton1.OverrideDefault.Border.Width = 3;
+            this.kryptonButton1.OverrideDefault.Content.Padding = new System.Windows.Forms.Padding(-1, 13, -1, -1);
+            this.kryptonButton1.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("League Spartan", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.Size = new System.Drawing.Size(315, 92);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.SeaGreen;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.ForestGreen;
+            this.kryptonButton1.StateCommon.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kryptonButton1.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Border.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kryptonButton1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 5;
+            this.kryptonButton1.StateCommon.Border.Width = 3;
+            this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, 13, -1, -1);
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("League Spartan", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateTracking.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateTracking.Border.Rounding = 5;
+            this.kryptonButton1.StateTracking.Border.Width = 3;
+            this.kryptonButton1.TabIndex = 2;
+            this.kryptonButton1.Values.Text = "Launch";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonTextBox1.Location = new System.Drawing.Point(780, 389);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(315, 29);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonTextBox1.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBox1.StateCommon.Border.Width = 2;
+            this.kryptonTextBox1.TabIndex = 3;
+            this.kryptonTextBox1.Text = "SkarUser";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(780, 368);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Username:";
+            // 
             // skarLauncherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,6 +817,9 @@ namespace SkarLauncher
             this.homePanel.PerformLayout();
             this.sideBarPanel.ResumeLayout(false);
             this.installBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gamePanel)).EndInit();
+            this.gamePanel.ResumeLayout(false);
+            this.gamePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -714,6 +857,12 @@ namespace SkarLauncher
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton addInstall_noMCP;
         private ComponentFactory.Krypton.Toolkit.KryptonButton addInstall_colorButton;
         private System.Windows.Forms.ColorDialog addInstall_colorDialog;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel gamePanel;
+        private System.Windows.Forms.Label gamePanel_headerLabel;
+        private System.Windows.Forms.Label label1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
